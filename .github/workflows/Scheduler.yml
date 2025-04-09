@@ -1,0 +1,43 @@
+name: Tweet Scheduler
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '* * * * *'
+    - cron: '* * * * *'
+    - cron: '* * * * *'
+    - cron: '* * * * *'
+    - cron: '* * * * *'
+    - cron: '* * * * *'
+    - cron: '* * * * *'
+    - cron: '* * * * *'
+    - cron: '* * * * *'
+    - cron: '* * * * *'
+jobs:
+  run_script:
+    runs-on: ubuntu-latest  # Runs on a Linux virtual machine
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2  # Pulls your code from the repository
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11'  # Specify your Python version
+
+      - name: Install dependencies
+        run: |
+          pip install tweepy  # Install your script dependencies
+          pip install openai
+
+      - name: Run the script
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          API_KEY: ${{ secrets.API_KEY }}
+          API_SECRET: ${{ secrets.API_SECRET }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
+        run: |
+          python XautomationBot.py  # Replace with your script name
+
+        
