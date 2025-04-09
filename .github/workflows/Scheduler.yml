@@ -2,17 +2,17 @@ name: Tweet Scheduler
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '* * * * *'
-    - cron: '* * * * *'
-    - cron: '* * * * *'
-    - cron: '* * * * *'
-    - cron: '* * * * *'
-    - cron: '* * * * *'
-    - cron: '* * * * *'
-    - cron: '* * * * *'
-    - cron: '* * * * *'
-    - cron: '* * * * *'
+  #schedule:
+    #- cron: '* * * * *'
+    #- cron: '* * * * *'
+    #- cron: '* * * * *'
+    #- cron: '* * * * *'
+    #- cron: '* * * * *'
+    #- cron: '* * * * *'
+    #- cron: '* * * * *'
+    #- cron: '* * * * *'
+    #- cron: '* * * * *'
+    #- cron: '* * * * *'
 jobs:
   run_script:
     runs-on: ubuntu-latest  # Runs on a Linux virtual machine
