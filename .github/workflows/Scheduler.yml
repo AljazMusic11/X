@@ -38,6 +38,6 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
         run: |
-          python XautomationBot.py  # Replace with your script name
+          python TweetPoster.py  
 
         
