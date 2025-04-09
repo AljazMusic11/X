@@ -29,14 +29,9 @@ jobs:
         run: |
           pip install tweepy  # Install your script dependencies
           pip install openai
+          pip install python-dotenv
 
       - name: Run the script
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          API_KEY: ${{ secrets.API_KEY }}
-          API_SECRET: ${{ secrets.API_SECRET }}
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
         run: |
           python TweetPoster.py  
 
