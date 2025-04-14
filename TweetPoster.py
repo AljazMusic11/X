@@ -8,13 +8,13 @@ load_dotenv()
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 API_KEY = os.getenv("API_KEY")
-API_SECRET = os.getenv("API_SECRET")
+API_KEY_SECRET = os.getenv("API_KEY_SECRET")
 ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
 ACCESS_TOKEN_SECRET = os.getenv("ACCESS_TOKEN_SECRET")
 
 client = tweepy.Client(
     consumer_key=API_KEY,
-    consumer_secret=API_SECRET,
+    consumer_secret=API_KEY_SECRET,
     access_token=ACCESS_TOKEN,
     access_token_secret=ACCESS_TOKEN_SECRET
 )
