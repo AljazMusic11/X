@@ -3,7 +3,7 @@ name: Tweet Scheduler
 on:
   workflow_dispatch:
   schedule:
-    - cron: '50 18 * * *'
+    #- cron: '50 18 * * *'
     #- cron: '31 4 * * *'
     #- cron: '1 6 * * *'
     #- cron: '53 9 * * *'
